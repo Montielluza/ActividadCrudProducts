@@ -1,0 +1,16 @@
+<div *ngIf="productService.getProducts().length === 0">
+
+    <h3>
+        No hay productos para mostrar
+    </h3>
+
+</div>
+
+<div
+*ngFor="let product of productService.getProducts()">
+
+    <app-product-card
+    [product]="product">
+    </app-product-card>
+
+</div>

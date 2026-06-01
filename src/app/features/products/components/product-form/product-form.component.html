@@ -1,0 +1,28 @@
+<h2>Crear Producto</h2>
+
+<input
+type="text"
+placeholder="Nombre"
+[(ngModel)]="nombre">
+
+<br><br>
+
+<input
+type="number"
+placeholder="Precio"
+[(ngModel)]="precio">
+
+<br><br>
+
+<button
+(click)="crearProducto()"
+[disabled]="!formularioValido()">
+
+{{
+    productService.selectedProduct
+    ? 'Actualizar'
+    : 'Crear'
+}}
+
+
+</button>

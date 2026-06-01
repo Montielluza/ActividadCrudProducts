@@ -1,0 +1,20 @@
+<div
+class="card"
+(click)="seleccionarProducto()">
+
+    <h3>
+        {{product.nombre}}
+    </h3>
+
+    <p>
+        $ {{product.precio}}
+    </p>
+
+    <button
+        (click)="eliminar(); $event.stopPropagation()">
+
+        Eliminar
+
+    </button>
+
+</div>
